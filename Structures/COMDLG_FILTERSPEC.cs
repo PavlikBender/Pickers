@@ -5,6 +5,12 @@ namespace Pickers.Structures;
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto, Pack = 4)]
 internal struct COMDLG_FILTERSPEC
 {
+    internal COMDLG_FILTERSPEC(string spec)
+    {
+        pszName = spec;
+        pszSpec = spec;
+    }
+
     internal COMDLG_FILTERSPEC(string name, string spec)
     {
         pszName = name;

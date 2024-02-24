@@ -20,9 +20,12 @@ internal static class Helper
         try
         {
             dialog.SetOptions(fos);
+
             if (typeFilters != null)
             {
-                var filterSpecs = typeFilters.Select(f => new COMDLG_FILTERSPEC(f, f)).ToArray();
+                typeFilters.Insert(0, string.Join("; ", typeFilters));
+                var filterSpecs = typeFilters.Select(f => new COMDLG_FILTERSPEC(f)).ToArray();
+
                 dialog.SetFileTypes((uint)filterSpecs.Length, filterSpecs);
             }
 
