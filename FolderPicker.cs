@@ -13,6 +13,10 @@ public class FolderPicker
     /// </summary>
     private readonly IntPtr _windowHandle;
 
+    /// <summary>
+    /// Folder pick dialog.
+    /// </summary>
+    /// <param name="windowHandle">Window handle where dialog should appear.</param>
     public FolderPicker(IntPtr windowHandle)
     {
         _windowHandle = windowHandle;

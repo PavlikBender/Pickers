@@ -13,6 +13,10 @@ public class FileOpenPicker
     /// </summary>
     private readonly IntPtr _windowHandle;
 
+    /// <summary>
+    /// File pick dialog.
+    /// </summary>
+    /// <param name="windowHandle">Window handle where dialog should appear.</param>
     public FileOpenPicker(IntPtr windowHandle)
     {
         _windowHandle = windowHandle;
