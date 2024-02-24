@@ -1,5 +1,5 @@
 # Pickers
-WinUI 3 (WindowsAppSDK) FileOpenPicker doesn't work for appa that runs under Administrator privileges.
+WinUI 3 (WindowsAppSDK) FileOpenPicker doesn't work for app that runs under Administrator privileges.
 
 [Trying to use a FileOpenPicker while running the app as Administrator will crash the app](https://github.com/microsoft/WindowsAppSDK/issues/2504)
 
