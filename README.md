@@ -11,7 +11,7 @@ I found several good implementations:
 1. [HedgeModManager](https://github.com/thesupersonic16/HedgeModManager/blob/0f2695f0e12f12ada9f8764827d9fc1370b0307f/HedgeModManager/UI/MainWindow.xaml.cs#L1465)
 2. [ShellFileDialogs](https://github.com/daiplusplus/ShellFileDialogs)
 
-This project is IFileOpenDialog [interpretation of HedgeModManager](https://github.com/thesupersonic16/HedgeModManager/blob/0f2695f0e12f12ada9f8764827d9fc1370b0307f/HedgeModManager/ShellProvider.cs) solution. I made File pick dialog and folder pick dialog.
+This project is IFileOpenDialog interpretation of [HedgeModManager](https://github.com/thesupersonic16/HedgeModManager/blob/0f2695f0e12f12ada9f8764827d9fc1370b0307f/HedgeModManager/ShellProvider.cs) solution. I made File pick dialog and folder pick dialog.
 
 ## How to use
 Add project to your solution and set dependencies.
