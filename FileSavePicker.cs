@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Pickers;
 
 /// <summary>
-/// Class responsible for file pick dialog.
+/// Class responsible for save file pick dialog.
 /// </summary>
 public class FileSavePicker
 {
@@ -16,7 +16,7 @@ public class FileSavePicker
     private readonly IntPtr _windowHandle;
 
     /// <summary>
-    /// File pick dialog.
+    /// File save pick dialog.
     /// </summary>
     /// <param name="windowHandle">Window handle where dialog should appear.</param>
     public FileSavePicker(IntPtr windowHandle)
@@ -25,7 +25,7 @@ public class FileSavePicker
     }
 
     /// <summary>
-    /// Shows file pick dialog.
+    /// Shows save file pick dialog.
     /// </summary>
     /// <param name="typeFilters">List of extensions applied on dialog.</param>
     /// <param name="defaultName">Default name for the file.</param>

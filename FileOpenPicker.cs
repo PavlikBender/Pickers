@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Pickers;
 
 /// <summary>
-/// Class responsible for file pick dialog.
+/// Class responsible for open file pick dialog.
 /// </summary>
 public class FileOpenPicker
 {
@@ -16,7 +16,7 @@ public class FileOpenPicker
     private readonly IntPtr _windowHandle;
 
     /// <summary>
-    /// File pick dialog.
+    /// Open File pick dialog.
     /// </summary>
     /// <param name="windowHandle">Window handle where dialog should appear.</param>
     public FileOpenPicker(IntPtr windowHandle)
@@ -25,7 +25,7 @@ public class FileOpenPicker
     }
 
     /// <summary>
-    /// Shows file pick dialog.
+    /// Shows open file pick dialog.
     /// </summary>
     /// <param name="typeFilters">List of extensions applied on dialog.</param>
     /// <returns>Path to selected file or empty string.</returns>
