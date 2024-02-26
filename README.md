@@ -16,7 +16,7 @@ This project is IFileOpenDialog interpretation of [HedgeModManager](https://gith
 ## How to use
 Add project to your solution and set dependencies.
 
-### File pick dialog
+### Open file pick dialog
 
 ```csharp
 using Pickers;
@@ -32,6 +32,26 @@ var openPicker = new FileOpenPicker(_handle);
 var file = openPicker.Show(filters);
 // Result example: C:\Users\SomeUser\Documents\HelloWorld.mp3 or string.Empty.
 ```
+
+### Save file pick dialog
+
+```csharp
+using Pickers;
+...
+
+// Set filters.
+var filters = new List<string> { "*.mp3", "*.wav" };
+// Set default file name
+var defaultName = "song.mp3"
+// Window handle
+var _handle = Process.GetCurrentProcess().MainWindowHandle;
+// Create dialog.
+var openPicker = new FileSavePicker(_handle);
+// Show dialog.
+var file = openPicker.Show(filters, defaultName);
+// Result example: C:\Users\SomeUser\Documents\HelloWorld.mp3 or string.Empty.
+```
+
 
 ### Folder pick dialog
 ```csharp
