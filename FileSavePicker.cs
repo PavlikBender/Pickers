@@ -6,7 +6,7 @@ namespace Pickers;
 /// <summary>
 /// Class responsible for file pick dialog.
 /// </summary>
-public class FileOpenPicker
+public class FileSavePicker
 {
     /// <summary>
     /// Window handle where dialog should appear.
@@ -17,7 +17,7 @@ public class FileOpenPicker
     /// File pick dialog.
     /// </summary>
     /// <param name="windowHandle">Window handle where dialog should appear.</param>
-    public FileOpenPicker(IntPtr windowHandle)
+    public FileSavePicker(IntPtr windowHandle)
     {
         _windowHandle = windowHandle;
     }
@@ -26,9 +26,10 @@ public class FileOpenPicker
     /// Shows file pick dialog.
     /// </summary>
     /// <param name="typeFilters">List of extensions applied on dialog.</param>
+    /// <param name="defaultName">Default name for the file.</param>
     /// <returns>Path to selected file or empty string.</returns>
-    public string Show(List<string>? typeFilters = null)
+    public string Show(List<string>? typeFilters = null, string defaultName = "")
     {
-        return Helper.ShowOpen(_windowHandle, FOS.FOS_FORCEFILESYSTEM, typeFilters);
+        return Helper.ShowSave(_windowHandle, FOS.FOS_FORCEFILESYSTEM, typeFilters, defaultName);
     }
 }
