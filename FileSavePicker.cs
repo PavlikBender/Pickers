@@ -6,9 +6,9 @@ using System.Collections.Generic;
 namespace Pickers;
 
 /// <summary>
-/// Class responsible for open file pick dialog.
+/// Class responsible for save file pick dialog.
 /// </summary>
-public class FileOpenPicker
+public class FileSavePicker
 {
     /// <summary>
     /// Window handle where dialog should appear.
@@ -16,21 +16,22 @@ public class FileOpenPicker
     private readonly IntPtr _windowHandle;
 
     /// <summary>
-    /// Open File pick dialog.
+    /// File save pick dialog.
     /// </summary>
     /// <param name="windowHandle">Window handle where dialog should appear.</param>
-    public FileOpenPicker(IntPtr windowHandle)
+    public FileSavePicker(IntPtr windowHandle)
     {
         _windowHandle = windowHandle;
     }
 
     /// <summary>
-    /// Shows open file pick dialog.
+    /// Shows save file pick dialog.
     /// </summary>
     /// <param name="typeFilters">List of extensions applied on dialog.</param>
+    /// <param name="defaultName">Default name for the file.</param>
     /// <returns>Path to selected file or empty string.</returns>
-    public string Show(List<string>? typeFilters = null)
+    public string Show(List<string>? typeFilters = null, string defaultName = "")
     {
-        return Helper.ShowOpen(_windowHandle, FOS.FOS_FORCEFILESYSTEM, typeFilters);
+        return Helper.ShowSave(_windowHandle, FOS.FOS_FORCEFILESYSTEM, typeFilters, defaultName);
     }
 }
